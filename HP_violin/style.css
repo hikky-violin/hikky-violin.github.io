@@ -1,0 +1,281 @@
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#606770;
+  --line:#e8e8e8;
+  --accent:#1f6f4a;   /* 深緑 */
+  --max: 920px;
+}
+
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP",
+               "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  line-height:1.8;
+  font-size: 16px; /* ←追加（全体の底上げ） */
+}
+
+/* PDF上部の一行 */
+.topline{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:10px 16px 0;
+  font-size:15px;
+  color:var(--muted);
+}
+.topline a{ color:inherit; text-decoration:none; }
+.topline a:hover{ text-decoration:underline; }
+.sep{ margin:0 8px; }
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:10px 16px 64px;
+}
+
+/* タイトル周り（中央寄せ） */
+.hero{
+  text-align:center;
+  padding-top:8px;
+}
+.hero-image{
+  text-align: center;
+  margin: 24px 0;
+}
+.hero-image img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.title{
+  margin:6px 0 6px;
+  font-size:40px;
+  letter-spacing:.02em;
+  color:var(--accent);
+  font-weight:700;
+}
+.subtitle{
+  margin:0 0 8px;
+  color:var(--text);
+  font-size:18px;
+}
+
+/* メニュー（PDFみたいに一行リンク） */
+/* 固定タブバー */
+.tabbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* メニュー（タブ） */
+.menu{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  font-size: 14px;
+}
+.menu a{
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.menu a:hover{
+  background: rgba(31, 111, 74, 0.1);
+  color: var(--accent);
+}
+
+/* 固定バーに隠れないように */
+.section{
+  scroll-margin-top: 72px; /* タブバーの高さ目安 */
+}
+
+
+/* 導入文（読みやすい幅＆中央寄せのまま本文は左寄せ） */
+.intro{
+  max-width:720px;
+  margin:0 auto;
+  text-align:left;
+  font-size:16px;
+}
+.intro p{ margin:0 0 12px; }
+.contactline{
+  margin-top:6px;
+  font-size:15px;
+}
+.contactline a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.contactline a:hover{ text-decoration:underline; }
+.dot{ margin:0 6px; color:var(--muted); }
+
+/* 下のセクションはタイトルだけ（余白だけ確保） */
+.section{
+  padding:34px 0;
+  border-top:1px solid var(--line);
+  text-align:left;
+}
+.section h2{
+  margin:0;
+  font-size:22px;
+  font-weight:700;
+}
+
+/* フッター */
+.footer{
+  padding-top:24px;
+  color:var(--muted);
+  font-size:14px;
+  border-top:1px solid var(--line);
+  margin-top:20px;
+}
+.footer p{ margin:0; text-align:center; }
+
+.course-line{
+  margin: 0 0 10px;
+  font-size: 18px;          /* さらに小さめ */
+  color: var(--muted);
+  letter-spacing: .08em;
+}
+.course-line .dot{
+  margin: 0 8px;
+  color: color-mix(in srgb, var(--muted) 70%, #fff);
+}
+
+/* PC表示だけ：改行は残しつつ、読みやすく整える */
+@media (min-width: 900px){
+  body { font-size: 17px; }   /* PCは少し大きく */
+
+  .intro{
+    font-size: 18px;      /* 17〜19で好み調整OK */
+    line-height: 1.9;     /* 少しゆったり */
+  }
+
+  /* 段落間の余白を整える（詰めすぎない） */
+  .intro p{
+    margin: 0 0 14px;
+  }
+
+  /* <br> は残す。ただし“改行の間隔”を少しだけ詰める */
+  .intro br{
+    display: block;
+    content: "";
+    margin-top: 4px;      /* 3〜6pxで調整 */
+  }
+
+  /* 導入文が長いので、最大幅を少し広げて読みやすく */
+  .intro{
+    max-width: 780px;     /* 720→少し広げる */
+  }
+
+  .contactline{
+    font-size: 17px;     /* 16〜18で好み調整 */
+    line-height: 1.9;
+  }
+  .contactline a{
+    font-weight: 700;    /* 少し強くして目に入りやすく */
+  }
+}
+
+/* --- Teacher section --- */
+.teacher-card{
+  margin-top: 18px;
+  display: grid;
+  gap: 18px;
+  align-items: start;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+}
+
+.teacher-photo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.teacher-name{
+  margin: 0 0 10px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  font-size: 22px;
+}
+
+.teacher-en{
+  font-weight: 700;
+  color: var(--muted);
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.teacher-lead{
+  margin: 0 0 14px;
+  color: var(--text);
+}
+
+.teacher-block{
+  padding: 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, #fff 92%, var(--accent));
+}
+
+.teacher-label{
+  margin: 0 0 8px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: .06em;
+  font-size: 13px;
+}
+
+.teacher-list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.teacher-list li{
+  margin: 0 0 6px;
+}
+
+.teacher-cta{
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
+.teacher-cta a{
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+.teacher-cta a:hover{ text-decoration: underline; }
+
+@media (min-width: 900px){
+  .teacher-card{
+    grid-template-columns: 320px 1fr;
+    padding: 22px;
+    gap: 22px;
+  }
+  .teacher-name{ font-size: 24px; }
+}
+
+
+
