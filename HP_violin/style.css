@@ -452,4 +452,154 @@ body{
   }
 }
 
+/* --- Access section --- */
+.access-lead{
+  margin: 14px 0 22px;
+  color: var(--text);
+  max-width: 760px;
+  line-height: 1.9;
+}
 
+.access-grid{
+  display: grid;
+  gap: 40px;
+}
+
+.access-card{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px;
+  border-radius: 24px;
+  background: #f3f3f3;
+  border: none;
+  box-shadow: none;
+}
+
+.access-body{
+  padding: 0;
+  background: transparent;
+  min-width: 0;
+}
+
+.access-name{
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.access-address{
+  margin: 0 0 14px;
+  color: #8c5b52;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.access-list{
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.access-list li{
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.access-photos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.access-photo-item{
+  margin: 0;
+  text-align: center;
+}
+
+.access-photo-item img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px;
+  border: none;
+  background: #ddd;
+}
+
+.access-photo-item figcaption{
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.access-map{
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.access-map iframe{
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
+.map-button{
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent);
+  font-weight: 700;
+  transition: opacity .2s ease;
+}
+
+.map-button:hover{
+  opacity: 0.86;
+}
+
+@media (max-width: 767px){
+  .access-grid{
+    gap: 32px;
+  }
+
+  .access-card{
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .access-photos{
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .access-photo-item img{
+    border-radius: 18px;
+  }
+
+  .access-photo-item figcaption{
+    font-size: 14px;
+  }
+
+  .access-map{
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .access-map iframe{
+    height: 260px;
+  }
+}
+
+@media (max-width: 520px){
+  .access-photos{
+    grid-template-columns: 1fr;
+  }
+}
