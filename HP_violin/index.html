@@ -1,53 +1,53 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ひっきー バイオリン教室</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  referrerpolicy="no-referrer"
+  />
 </head>
-
 <body>
-  <!-- PDF上部の一行 -->
   <div class="topline">
     <span>福岡県北九州市八幡西区（折尾）＆福津市</span>
     <span class="sep">℡</span>
     <a href="tel:09034155454">０９０（３４１５）５４５４</a>
   </div>
 
+  <div class="tabbar" role="navigation" aria-label="ページ内メニュー">
+    <nav class="menu">
+      <a href="#about">教室案内</a>
+      <a href="#teacher">講師</a>
+      <a href="#lesson">レッスン案内</a>
+      <a href="#access">アクセス</a>
+      <a href="#qa">Q＆A</a>
+      <a href="#blog">ブログ</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+
   <main class="wrap">
-    <!-- タイトル -->
     <header class="hero" id="top">
-    <h1 class="title">ひっきー バイオリン教室</h1>
-    <p class="course-line">
+      <h1 class="title">ひっきー バイオリン教室</h1>
+      <p class="course-line">
         <span>ヴァイオリン</span><span class="dot">/</span>
         <span>ヴィオラ</span><span class="dot">/</span>
         <span>ピアノ</span><span class="dot">/</span>
         <span>音大対策</span>
-    </p>
+      </p>
 
-
+      <div class="hero-image">
+        <img src="image/violin.png" alt="バイオリン">
+      </div>
     </header>
 
-    <!-- 固定タブ（ここが常に表示される） -->
-    <div class="tabbar" role="navigation" aria-label="ページ内メニュー">
-    <nav class="menu">
-        <a href="#about">教室案内</a>
-        <a href="#teacher">講師</a>
-        <a href="#lesson">レッスン案内</a>
-        <a href="#access">アクセス</a>
-        <a href="#qa">Q＆A</a>
-        <a href="#blog">ブログ</a>
-        <a href="#contact">お問い合わせ</a>
-    </nav>
-    </div>
+    <section id="about" class="section">
+      <h2>教室案内</h2>
 
-      <!-- バイオリン画像 -->
-    <div class="hero-image">
-    <img src="image/violin.png" alt="バイオリン">
-    </div>
-
-      <!-- PDFの導入文（改行多めで寄せる） -->
       <div class="intro">
         <p>
           ひっきーヴァイオリン教室は福岡県八幡西区(折尾)と福津市(福間)にある個人教室です。<br>
@@ -67,13 +67,13 @@
           からお願いします。
         </p>
       </div>
-    </header>
+    </section>
 
     <section id="teacher" class="section">
       <h2>講師</h2>
 
       <div class="teacher-card">
-        <div class="teacher-photo" aria-hidden="true">
+        <div class="teacher-photo">
           <img src="image/teacher.JPG" alt="講師の写真">
         </div>
 
@@ -93,7 +93,7 @@
             <p class="teacher-label">経歴</p>
             <ul class="teacher-list">
               <li>大分芸術短期大学及び専攻科 卒業</li>
-              <li>武蔵野音楽大学　編入学後 卒業</li>
+              <li>武蔵野音楽大学 編入学後 卒業</li>
               <li>卒業後は、フリーの演奏家として九州を中心にオーケストラの客演、室内楽等で活動</li>
               <li>海外での演奏活動も行ってきました</li>
               <li>響室内合奏団団員を経て、徳久ヴァイオリンスクールにて長年後進の指導に当たる</li>
@@ -120,11 +120,9 @@
         </p>
 
         <div class="lesson-grid">
-          <!-- 子供 -->
           <article class="lesson-card">
             <div class="lesson-head">
               <h3>子供バイオリンコース</h3>
-              <span class="badge">月3回</span>
             </div>
 
             <div class="price-table">
@@ -168,11 +166,9 @@
             </ul>
           </article>
 
-          <!-- 大人 -->
           <article class="lesson-card">
             <div class="lesson-head">
               <h3>大人バイオリンコース</h3>
-              <span class="badge">月3回</span>
             </div>
 
             <div class="price-table">
@@ -215,11 +211,9 @@
             </ul>
           </article>
 
-          <!-- ピアノ -->
           <article class="lesson-card">
             <div class="lesson-head">
               <h3>ピアノコース</h3>
-              <span class="badge">月3回</span>
             </div>
 
             <div class="price-table">
@@ -249,10 +243,9 @@
             </ul>
           </article>
 
-          <!-- 音大対策 -->
           <article class="lesson-card">
             <div class="lesson-head">
-              <h3>音大受験の調音・楽典</h3>
+              <h3>音大受験の聴音・楽典</h3>
               <span class="badge">1レッスン</span>
             </div>
 
@@ -276,30 +269,36 @@
       </div>
     </section>
 
-
     <section id="access" class="section">
       <h2>アクセス</h2>
 
       <p class="access-lead">
         折尾教室・福間教室の2教室でレッスンを行っています。<br>
+        ご都合のよい教室をお選びください。
       </p>
 
       <div class="access-grid">
         <!-- 折尾教室 -->
         <article class="access-card">
-          <div class="access-body">
+          <div class="access-head">
             <h3 class="access-name">折尾教室</h3>
             <p class="access-address">八幡西区美吉野町3-11</p>
-
-            <ul class="access-list">
-              <li>時間：10:00 ~ 20:00</li>
-              <li>JR水巻駅より徒歩15分</li>
-              <li>駐車場あり</li>
-              <li>急傾斜の坂道があります</li>
-            </ul>
           </div>
 
-          <div class="access-photos two">
+          <div class="access-body">
+            <ul class="access-list">
+              <li>時間：10:00 ～ 20:00</li>
+              <li>JR水巻駅より徒歩15分</li>
+              <li>駐車場あり</li>
+            </ul>
+
+            <p class="access-note">
+              <span class="access-note-icon">⚠</span>
+              急傾斜の坂道があります
+            </p>
+          </div>
+
+          <div class="access-photos">
             <figure class="access-photo-item">
               <img src="image/orio-outside.jpeg" alt="折尾教室の外観">
               <figcaption>外観</figcaption>
@@ -311,24 +310,24 @@
           </div>
 
           <div class="access-map">
+            <p class="access-map-title">アクセスマップ</p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.392529629147!2d130.7018900747755!3d33.85377342818557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543c8dd1123e09f%3A0xff519459af72a711!2z44Gy44Gj44GN44O844OQ44Kk44Kq44Oq44Oz5pWZ5a6kKOaKmOWwvik!5e0!3m2!1sja!2sjp!4v1773119878352!5m2!1sja!2sjp"
-              width="100%"
-              height="260"
-              style="border:0;"
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
             </iframe>
           </div>
         </article>
 
         <!-- 福間教室 -->
         <article class="access-card">
-          <div class="access-body">
+          <div class="access-head">
             <h3 class="access-name">福間教室</h3>
             <p class="access-address">福津市3-7-2</p>
+          </div>
 
+          <div class="access-body">
             <ul class="access-list">
               <li>金曜・土曜のみ</li>
               <li>JR福間駅より徒歩20分</li>
@@ -337,7 +336,7 @@
             </ul>
           </div>
 
-          <div class="access-photos two">
+          <div class="access-photos">
             <figure class="access-photo-item">
               <img src="image/fukuma-outside.jpg" alt="福間教室の外観">
               <figcaption>外観</figcaption>
@@ -349,14 +348,12 @@
           </div>
 
           <div class="access-map">
+            <p class="access-map-title">アクセスマップ</p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.3931439535813!2d130.4814954747718!3d33.77634443224982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3542294431934e19%3A0x6fef5cfd86f785c0!2z44Gy44Gj44GN44O844OQ44Kk44Kq44Oq44Oz5pWZ5a6k77yI56aP6ZaT77yJ!5e0!3m2!1sja!2sjp!4v1773119811101!5m2!1sja!2sjp"
-              width="100%"
-              height="260"
-              style="border:0;"
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
             </iframe>
           </div>
         </article>
@@ -373,10 +370,10 @@
 
       <div class="qa-list">
         <details class="qa-item" open>
-          <summary>何歳から始められますか？ちゃんとレッスンを受けられるか心配です。</summary>
+          <summary><span>何歳から始められますか？ちゃんとレッスンを受けられるか心配です。</span></summary>
           <div class="qa-answer">
-            <p>
-              3〜4歳から始められます。<br>
+            <p class="qa-answer-main">3〜4歳から始められます。</p>
+            <p class="qa-answer-sub">
               人見知りのお子さまや、30分のレッスンがまだ難しいと判断した場合は、
               一定期間20分レッスンで無理なく進めています。
             </p>
@@ -384,9 +381,10 @@
         </details>
 
         <details class="qa-item">
-          <summary>大人や高齢になってから習うのは難しいですか？</summary>
+          <summary><span>大人や高齢になってから習うのは難しいですか？</span></summary>
           <div class="qa-answer">
-            <p>
+            <p class="qa-answer-main">いいえ、難しくありません。</p>
+            <p class="qa-answer-sub">
               大人になってからバイオリンを始めて、憧れの曲を弾けるようになった方もたくさんいらっしゃいます。<br>
               70歳から始められた方もおり、新しい趣味として楽しく通ってくださっています。<br>
               手先や脳へのよい刺激になるというお声もあり、ご高齢の方にもおすすめです。
@@ -395,41 +393,41 @@
         </details>
 
         <details class="qa-item">
-          <summary>男性でも受講できますか？</summary>
+          <summary><span>男性でも受講できますか？</span></summary>
           <div class="qa-answer">
-            <p>
-              はい。性別を問わず、どなたでも受講していただけます。<br>
+            <p class="qa-answer-main">はい。性別を問わず、どなたでも受講していただけます。</p>
+            <p class="qa-answer-sub">
               教室には男性の生徒さんも通われていますので、どうぞ安心してお越しください。
             </p>
           </div>
         </details>
 
         <details class="qa-item">
-          <summary>楽器を持っていないのですが、どうすればよいですか？</summary>
+          <summary><span>楽器を持っていないのですが、どうすればよいですか？</span></summary>
           <div class="qa-answer">
-            <p>
-              見学の際におすすめの楽器をご案内しています。<br>
+            <p class="qa-answer-main">見学の際におすすめの楽器をご案内しています。</p>
+            <p class="qa-answer-sub">
               また、レンタル楽器のご用意もありますので、まだ楽器をお持ちでない方もお気軽にご相談ください。
             </p>
           </div>
         </details>
 
         <details class="qa-item">
-          <summary>体験レッスンはありますか？</summary>
+          <summary><span>体験レッスンはありますか？</span></summary>
           <div class="qa-answer">
-            <p>
+            <p class="qa-answer-main">まずはレッスンのご見学をおすすめしています。</p>
+            <p class="qa-answer-sub">
               バイオリンはすぐに音を出して演奏できる楽器ではないため、
-              まずはレッスンのご見学をおすすめしています。<br>
               教室の雰囲気や指導内容をご覧いただいたうえで、ご検討いただければと思います。
             </p>
           </div>
         </details>
 
         <details class="qa-item">
-          <summary>バイオリンを触ったことがなくても大丈夫ですか？</summary>
+          <summary><span>バイオリンを触ったことがなくても大丈夫ですか？</span></summary>
           <div class="qa-answer">
-            <p>
-              はい、大丈夫です。<br>
+            <p class="qa-answer-main">はい、大丈夫です。</p>
+            <p class="qa-answer-sub">
               バイオリンだけでなく、ピアノなど他の楽器もまったく初めてという方が多くいらっしゃいますので、
               どうぞご安心ください。
             </p>
@@ -437,10 +435,10 @@
         </details>
 
         <details class="qa-item">
-          <summary>楽譜が読めなくても大丈夫ですか？</summary>
+          <summary><span>楽譜が読めなくても大丈夫ですか？</span></summary>
           <div class="qa-answer">
-            <p>
-              はい、大丈夫です。<br>
+            <p class="qa-answer-main">はい、大丈夫です。</p>
+            <p class="qa-answer-sub">
               ピアノの生徒さんはワークブックを使って楽譜を読む練習を行い、
               バイオリンの生徒さんも段階的に読めるように進めていきます。
             </p>
@@ -448,10 +446,10 @@
         </details>
 
         <details class="qa-item">
-          <summary>お休みした場合、振り替えはできますか？</summary>
+          <summary><span>お休みした場合、振り替えはできますか？</span></summary>
           <div class="qa-answer">
-            <p>
-              振り替えレッスンは可能です。<br>
+            <p class="qa-answer-main">振り替えレッスンは可能です。</p>
+            <p class="qa-answer-sub">
               ただし、当日キャンセルの場合は振り替えレッスンが10分短縮となります。<br>
               また、キャンセルが何度も続く場合には、振り替えをお受けできないことがあります。
             </p>
@@ -459,18 +457,17 @@
         </details>
 
         <details class="qa-item">
-          <summary>忙しくて練習ができず、ついていけるか心配です。</summary>
+          <summary><span>忙しくて練習ができず、ついていけるか心配です。</span></summary>
           <div class="qa-answer">
-            <p>
-              生徒さんお一人おひとりのペースに合わせてレッスンを行っていますので、ご安心ください。
-            </p>
+            <p class="qa-answer-main">生徒さんお一人おひとりのペースに合わせてレッスンを行っていますので、ご安心ください。</p>
           </div>
         </details>
 
         <details class="qa-item">
-          <summary>好きな曲や弾いてみたい曲を教えてもらえますか？</summary>
+          <summary><span>好きな曲や弾いてみたい曲を教えてもらえますか？</span></summary>
           <div class="qa-answer">
-            <p>
+            <p class="qa-answer-main">ご希望の曲の指導も行っています。</p>
+            <p class="qa-answer-sub">
               発表会やご自身で演奏される機会に向けて、ご希望の曲の指導も行っています。<br>
               ただし、現在の進度や曲の難易度によっては、ご希望に添えない場合もありますのでご了承ください。
             </p>
@@ -478,56 +475,53 @@
         </details>
       </div>
 
-      <div class="qa-contact">
-        <p>
-          そのほか、ご不明な点や不安なことがありましたら
-          <a href="#contact">お問い合わせ</a> からお気軽にご連絡ください。
-        </p>
       </div>
     </section>
 
     <section id="blog" class="section">
       <h2>ブログ・SNS</h2>
 
-
       <p class="blog-card-lead">
         教室の日常やレッスンの様子、お知らせなどをInstagramやブログで発信しています。
       </p>
 
-      <!-- Ameblo card -->
-      <a
-        href="https://ameblo.jp/tamachan4pudding/"
-        class="blog-link-card"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="blog-link-card-text">
-          <span class="blog-link-label">Amebaブログ</span>
-          <h3>ひっきーの楽しいバイオリン教室</h3>
-          <p>
-            教室の日常やレッスンの様子をブログにて発信しています。
-          </p>
-          <span class="blog-link-button">ブログを見る</span>
-        </div>
-      </a>
+    <!-- Ameba card -->
+    <a
+      href="https://ameblo.jp/tamachan4pudding/"
+      class="blog-link-card ameblo-card"
+      target="_blank"
+      rel="noopener"
+    >
+      <div class="blog-link-card-text">
+        <h3>
+          <i class="fa-solid fa-pen-nib blog-title-icon" aria-hidden="true"></i>
+          Amebaブログ｜ひっきーの楽しいバイオリン教室
+        </h3>
+        <p>
+          教室の日常やレッスンの様子をブログにて発信しています。
+        </p>
+        <span class="blog-link-button">ブログを見る</span>
+      </div>
+    </a>
 
-      <!-- Instagram card -->
-      <a
-        href="https://www.instagram.com/hikky_violin/"
-        class="blog-link-card"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="blog-link-card-text">
-          <span class="blog-link-label">Instagram</span>
-          <h3>@hikky_violin</h3>
-          <p>
-            教室の日常や演奏の様子などをInstagramでご覧いただけます。
-          </p>
-          <span class="blog-link-button instagram-color">Instagramを見る</span>
-        </div>
-      </a>
-
+    <!-- Instagram card -->
+    <a
+      href="https://www.instagram.com/hikky_violin/"
+      class="blog-link-card instagram-card"
+      target="_blank"
+      rel="noopener"
+    >
+      <div class="blog-link-card-text">
+        <h3>
+          <i class="fa-brands fa-instagram blog-title-icon" aria-hidden="true"></i>
+          Instagram｜@hikky_violin
+        </h3>
+        <p>
+          教室の日常や演奏の様子などをInstagramでご覧いただけます。
+        </p>
+        <span class="blog-link-button">Instagramを見る</span>
+      </div>
+    </a>
     </section>
 
     <section id="contact" class="section">
@@ -552,7 +546,7 @@
         <article class="contact-card">
           <h3>お電話でのお問い合わせ</h3>
           <p class="contact-tel">
-            <a href="tel:09012345678">090-1234-5678</a>
+            <a href="tel:09034155454">090-3415-5454</a>
           </p>
           <p class="contact-note">
             レッスン中はお電話に出られない場合がございます。<br>
@@ -566,12 +560,5 @@
       <p>© ひっきー バイオリン教室</p>
     </footer>
   </main>
-
-  <script>
-    // 固定ヘッダーはないけど、リンクジャンプの見切れ対策として一応
-    document.querySelectorAll("section[id]").forEach(sec => {
-      sec.style.scrollMarginTop = "24px";
-    });
-  </script>
 </body>
 </html>
