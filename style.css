@@ -336,7 +336,7 @@ body {
 .price-time,
 .lesson-bigprice-label {
   color: var(--sub);
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .price-note {
@@ -363,6 +363,38 @@ body {
 
 .lesson-bigprice-money {
   font-size: 20px;
+}
+
+.lesson-summary {
+  margin-top: 18px;
+}
+
+.lesson-main {
+  margin: 0 0 14px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: var(--sub);
+}
+
+.lesson-highlight {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--sub);
+  font-weight: 700;
+}
+
+.lesson-summary-list {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.lesson-summary-list li {
+  margin-bottom: 6px;
 }
 
 .lesson-notes {
