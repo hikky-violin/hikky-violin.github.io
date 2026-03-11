@@ -1,6 +1,6 @@
 :root {
   --base: #f5e8cf;
-  --base_2: #fff7e6;
+  --base_2: color-mix(in srgb, var(--base) 50%, #fff);
   --accent: #efc3bd;
   --accent_2: color-mix(in srgb, var(--accent) 50%, #fff);
   --sub: #957e80;
@@ -264,6 +264,7 @@ body {
 }
 
 /* lesson */
+/* lesson */
 .lesson-wrap {
   margin-top: 14px;
 }
@@ -313,19 +314,26 @@ body {
 
 .price-table {
   display: grid;
-  gap: 10px;
+  gap: 14px;
   margin-top: 4px;
 }
 
-.price-row,
-.lesson-bigprice {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.price-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px 220px;
+  align-items: center;
   gap: 12px;
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
   background: var(--accent_2);
+}
+
+.price-row-single {
+  grid-template-columns: minmax(0, 1fr) 220px;
+}
+
+.price-left {
+  min-width: 0;
 }
 
 .price-title {
@@ -340,13 +348,21 @@ body {
 }
 
 .price-note {
-  margin-top: 2px;
+  margin-top: 6px;
+  line-height: 1.6;
 }
 
 .price-right {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
+  display: contents;
+}
+
+.price-right-single {
+  display: block;
+}
+
+.price-time {
+  color: var(--sub);
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -355,6 +371,30 @@ body {
   color: var(--sub);
   font-weight: 900;
   letter-spacing: 0.02em;
+}
+
+.price-money {
+  display: inline-grid;
+  grid-template-columns: 48px 1fr;
+  align-items: baseline;
+  column-gap: 10px;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.price-money-single {
+  display: block;
+  text-align: right;
+}
+
+.price-label {
+  text-align: left;
+}
+
+.price-amount {
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
 }
 
 .lesson-bigprice {
@@ -863,6 +903,7 @@ body {
   margin-top: 12px;
   font-size: 0.95rem;
   line-height: 1.7;
+  color: var(--sub);
 }
 
 /* responsive */
@@ -956,17 +997,43 @@ body {
   .qa-answer {
     padding: 0 16px 16px;
   }
+}
 
+@media (max-width: 640px) {
   .price-row,
+  .price-row-single,
   .lesson-bigprice {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    align-items: start;
+    padding: 16px;
   }
 
   .price-right {
-    white-space: normal;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .price-right-single {
+    display: block;
+    width: 100%;
+  }
+
+  .price-time {
+    text-align: left;
+  }
+
+  .price-money {
+    grid-template-columns: 42px 1fr;
+    font-size: 18px;
+  }
+
+  .price-money-single {
+    text-align: left;
   }
 }
+
 
 @media (max-width: 600px) {
   .blog-card-group {
