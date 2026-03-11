@@ -131,7 +131,7 @@ body {
 .menu a {
   padding: 8px 12px;
   border-radius: 999px;
-  color: var(--accent);
+  color: var(--white);
   text-decoration: none;
   transition: 0.2s ease;
 }
