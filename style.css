@@ -1,12 +1,13 @@
 :root {
-  --base: #f5e8cf;
+  --base: #f3deb9;
   --base_2: color-mix(in srgb, var(--base) 50%, #fff);
-  --accent: #efc3bd;
+  --accent: #e8aaa3;
   --accent_2: color-mix(in srgb, var(--accent) 50%, #fff);
-  --sub: #957e80;
-  --line: #ebccb6;
+  --sub: #2a582c;
+  --sub2:rgb(74, 121, 81);
+  --line: #d9c4a2;
   --white: #fffaf0;
-  --muted: #8f7f7f;
+  --muted: #3e6e41;
   --max: 920px;
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.05);
@@ -133,7 +134,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--sub);
+  background: var(--sub2);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -153,6 +154,7 @@ body {
   color: var(--accent);
   text-decoration: none;
   transition: 0.2s ease;
+  font-weight: 600;
 }
 
 .menu a:hover {
