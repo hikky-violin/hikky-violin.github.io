@@ -102,6 +102,25 @@ body {
   letter-spacing: 0.02em;
 }
 
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.title-icon {
+  width: 56px;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .title-icon {
+    width: 44px;
+  }
+}
+
 .course-line {
   margin: 0 0 10px;
   color: var(--sub);
@@ -180,7 +199,6 @@ body {
 
 .contactline {
   margin-top: 6px;
-  font-size: 15px;
 }
 
 .footer {
@@ -239,7 +257,7 @@ body {
   .teacher-photo-grid img:first-child {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .teacher-photo-grid img:nth-child(2) {
@@ -424,7 +442,7 @@ body {
   align-items: baseline;
   column-gap: 10px;
   white-space: nowrap;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .price-money-single {
@@ -750,6 +768,8 @@ body {
 
 /* blog */
 
+.intro,
+.lesson-summary-list,
 .blog-card-lead,
 .contact-lead,
 .access-lead,
@@ -948,6 +968,21 @@ body {
   color: var(--sub);
 }
 
+/* footer */
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-icon {
+  width: 36px;
+  height: auto;
+  opacity: 0.9;
+}
+
 /* responsive */
 @media (min-width: 900px) {
   body {
@@ -965,7 +1000,6 @@ body {
   }
 
   .contactline {
-    font-size: 17px;
     line-height: 1.9;
   }
 
