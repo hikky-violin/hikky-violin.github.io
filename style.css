@@ -222,31 +222,30 @@ body {
 
 /* PC時：講師紹介全体を2カラム、
    左の写真エリアだけ縦2列にする */
-@media (min-width: 900px) {
+@media (min-width:700px) {
   .teacher-card {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 22px;
     align-items: start;
   }
-
   .teacher-photo-grid {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
-  }
-}
-
-@media (min-width: 900px) {
-  .teacher-card {
-    grid-template-columns: 360px 1fr;
+    height: 100%;
+    align-content: space-between;
   }
 
   .teacher-photo-grid img:first-child {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 20px;
   }
 
   .teacher-photo-grid img:nth-child(2) {
     aspect-ratio: 4 / 3;
+    object-fit: cover;
+    align-self: end;
   }
 }
 
