@@ -424,7 +424,7 @@ body {
   align-items: baseline;
   column-gap: 10px;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .price-money-single {
@@ -564,17 +564,14 @@ body {
 }
 
 .access-note {
-  margin: 16px 0 0;
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: var(--base);
-  color: var(--sub);
-  line-height: 1.7;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.98rem;
 }
 
 .access-note-icon {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 4px;
   font-weight: 700;
 }
 
