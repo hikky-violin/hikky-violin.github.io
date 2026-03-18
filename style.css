@@ -197,6 +197,59 @@ body {
 }
 
 /* teacher */
+
+.teacher-photo {
+  min-width: 0;
+}
+
+.teacher-body {
+  min-width: 0;
+}
+
+.teacher-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.teacher-photo-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+/* PC時：講師紹介全体を2カラム、
+   左の写真エリアだけ縦2列にする */
+@media (min-width: 900px) {
+  .teacher-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 22px;
+    align-items: start;
+  }
+
+  .teacher-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 900px) {
+  .teacher-card {
+    grid-template-columns: 360px 1fr;
+  }
+
+  .teacher-photo-grid img:first-child {
+    aspect-ratio: 3 / 4;
+  }
+
+  .teacher-photo-grid img:nth-child(2) {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 .teacher-card {
   display: grid;
   gap: 18px;
@@ -206,13 +259,6 @@ body {
   border-radius: var(--radius-md);
   background: var(--white);
   box-shadow: var(--shadow-md);
-}
-
-.teacher-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-sm);
 }
 
 .teacher-name {
@@ -937,6 +983,9 @@ body {
     font-size: 24px;
   }
 }
+
+
+
 
 @media (max-width: 767px) {
   .access-grid {
